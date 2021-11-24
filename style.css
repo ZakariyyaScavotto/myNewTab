@@ -45,9 +45,21 @@ a {
 	column-gap: 10px;
 }
 
+#QuickLinks {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+}
+
+#QuickLinks > p {
+	width: fit-content;
+}
+
 .containerBlue > p,
 .containerRed > p,
 #QuickLinks > p {
+	display: inline-block;
+	width: auto;
 	outline-style: solid;
 	outline-color: #e42024;
 	border-radius: 8px;
@@ -60,7 +72,8 @@ a {
 }
 
 #main-container > div {
-	margin: 10px 1000px 10px 0px; /*10px 50px 10px 50px;*/
+	position: relative;
+	margin: 10px 900px 10px 0px; /*10px 50px 10px 50px;*/
 	text-align: center;
 }
 
