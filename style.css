@@ -31,6 +31,11 @@ a {
 	text-decoration: underline;
 }
 
+.classes {
+	position: relative;
+	left: 30%;
+}
+
 .containerAnchor {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -47,12 +52,22 @@ a {
 
 #QuickLinks {
 	display: grid;
+	position: relative;
+	right: 30%;
+	align-items: center;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
+}
+@media (max-width: 900px) {
+	#QuickLinks {
+		right: 5%;
+		width: auto;
+	}
 }
 
 #QuickLinks > p {
 	width: fit-content;
+	text-align: center;
 }
 
 .containerBlue > p,
@@ -66,16 +81,16 @@ a {
 	padding: 5px;
 }
 
-#main-container {
+/* #main-container {
 	display: flex;
 	align-items: baseline;
 }
 
 #main-container > div {
 	position: relative;
-	margin: 10px 900px 10px 0px; /*10px 50px 10px 50px;*/
-	text-align: center;
-}
+	margin: 10px 900px 10px 0px; /*10px 50px 10px 50px;
+	text-align: center;} 
+*/
 
 /* #btnShow {
 	/* position: fixed;
