@@ -35,6 +35,7 @@ const setDisplay = (day) => {
 		// document.getElementById("btnHide").style.display = "none";
 		// document.getElementById("btnShow").style.display = "block";
 		show("blue");
+		document.getElementById("blueHead").style.color = "#165BAA";
 		hide("anchor");
 		hide("red");
 	} else if (day == 3 || day == 5) {
