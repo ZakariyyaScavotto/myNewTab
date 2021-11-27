@@ -31,6 +31,7 @@ const setDisplay = (day) => {
 		show("anchor");
 		hide("blue");
 		hide("red");
+		hide("weekend");
 	} else if (day == 2 || day == 4) {
 		// document.getElementById("btnHide").style.display = "none";
 		// document.getElementById("btnShow").style.display = "block";
@@ -38,11 +39,18 @@ const setDisplay = (day) => {
 		document.getElementById("blueHead").style.color = "#165BAA";
 		hide("anchor");
 		hide("red");
+		hide("weekend");
 	} else if (day == 3 || day == 5) {
 		// document.getElementById("btnHide").style.display = "none";
 		// document.getElementById("btnShow").style.display = "block";
 		show("red");
 		hide("blue");
+		hide("anchor");
+		hide("weekend");
+	} else {
+		show("weekend");
+		hide("blue");
+		hide("red");
 		hide("anchor");
 	}
 };
