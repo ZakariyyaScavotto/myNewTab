@@ -1,60 +1,88 @@
 const show = (classname) => {
-	const elements = document.getElementsByClassName(classname);
+	const elements = document.getElementsByClassName(classname)
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.display = "block";
+		elements[i].style.display = "block"
 	}
-};
+}
 const hide = (classname) => {
-	const elements = document.getElementsByClassName(classname);
+	const elements = document.getElementsByClassName(classname)
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.display = "none";
+		elements[i].style.display = "none"
 	}
-};
+}
 const showAll = () => {
-	show("anchor");
-	show("blue");
-	show("red");
+	show("monday")
+	show("tuesday")
+	show("wednesday")
+	show("thursday")
+	show("friday")
+	show("weekend")
 
-	document.getElementById("main-container").style.alignItems = "center";
+	document.getElementById("main-container").style.alignItems = "center"
 	// document.getElementById("btnShow").style.display = "none";
 	// document.getElementById("btnHide").style.display = "block"
-};
+}
 const hideAll = () => {
-	const currDate = new Date();
-	const dayOfTheWeek = currDate.getDay();
-	setDisplay(dayOfTheWeek);
-};
+	const currDate = new Date()
+	const dayOfTheWeek = currDate.getDay()
+	setDisplay(dayOfTheWeek)
+}
 const setDisplay = (day) => {
 	if (day == 1) {
 		// document.getElementById("btnHide").style.display = "none";
 		// document.getElementById("btnShow").style.display = "block";
-		show("anchor");
-		hide("blue");
-		hide("red");
-		hide("weekend");
-	} else if (day == 2 || day == 4) {
+		show("monday")
+		hide("tuesday")
+		hide("wednesday")
+		hide("thursday")
+		hide("friday")
+		hide("weekend")
+	} else if (day == 2) {
 		// document.getElementById("btnHide").style.display = "none";
 		// document.getElementById("btnShow").style.display = "block";
-		show("blue");
-		document.getElementById("blueHead").style.color = "#165BAA";
-		hide("anchor");
-		hide("red");
-		hide("weekend");
-	} else if (day == 3 || day == 5) {
+		hide("monday")
+		show("tuesday")
+		hide("wednesday")
+		hide("thursday")
+		hide("friday")
+		hide("weekend")
+	} else if (day == 3) {
 		// document.getElementById("btnHide").style.display = "none";
 		// document.getElementById("btnShow").style.display = "block";
-		show("red");
-		hide("blue");
-		hide("anchor");
-		hide("weekend");
+		hide("monday")
+		hide("tuesday")
+		show("wednesday")
+		hide("thursday")
+		hide("friday")
+		hide("weekend")
+	} else if (day == 4) {
+		// document.getElementById("btnHide").style.display = "none";
+		// document.getElementById("btnShow").style.display = "block";
+		hide("monday")
+		hide("tuesday")
+		hide("wednesday")
+		show("thursday")
+		hide("friday")
+		hide("weekend")
+	} else if (day == 5) {
+		// document.getElementById("btnHide").style.display = "none";
+		// document.getElementById("btnShow").style.display = "block";
+		hide("monday")
+		hide("tuesday")
+		hide("wednesday")
+		hide("thursday")
+		show("friday")
+		hide("weekend")
 	} else {
-		show("weekend");
-		hide("blue");
-		hide("red");
-		hide("anchor");
+		hide("monday")
+		hide("tuesday")
+		hide("wednesday")
+		hide("thursday")
+		hide("friday")
+		show("weekend")
 	}
-};
+}
 
-const currDate = new Date();
-const dayOfTheWeek = currDate.getDay();
-setDisplay(dayOfTheWeek);
+const currDate = new Date()
+const dayOfTheWeek = currDate.getDay()
+setDisplay(dayOfTheWeek)

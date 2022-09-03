@@ -36,12 +36,13 @@ a {
 	left: 30%;
 }
 
-.containerAnchor {
+.containerMonday {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	text-align: center;
+	column-gap: 10px;
 }
-.containerAnchor > p {
+.containerMonday > p {
 	display: inline-block;
 	width: auto;
 	outline-style: solid;
@@ -50,8 +51,10 @@ a {
 	padding: 8px;
 }
 
-.containerBlue,
-.containerRed,
+.containerTuesday,
+.containerWednesday,
+.containerThursday,
+.containerFriday,
 .containerWeekend {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -79,8 +82,10 @@ a {
 	text-align: center;
 }
 
-.containerBlue > p,
-.containerRed > p,
+.containerTuesday > p,
+.containerWednesday > p,
+.containerThursday > p,
+.containerFriday > p,
 .containerWeekend > p,
 #QuickLinks > p {
 	display: inline-block;
